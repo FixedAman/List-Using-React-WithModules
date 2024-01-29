@@ -1,7 +1,6 @@
 import React from "react";
 
-const ErrorMessage = ({items}) => {
-  
+const ErrorMessage = ({ items }) => {
   if (items.length === 0) {
     return (
       <>
