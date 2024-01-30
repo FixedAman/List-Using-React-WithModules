@@ -1,13 +1,10 @@
 import React from "react";
 import style from "./Item.module.css";
-const Item = ({ fooditems  ,handleBuyButton}) => {
-  const handleBuyButtonClicked = (event) => {
-    console.log(event);
-    console.log(`${fooditems} being bought`);
-  };
+const Item = ({ fooditems ,bought ,handleBuyButton}) => {
+  
   return (
     <>
-      <li className={`${style.kgitem} list-group-item`}>
+      <li className={`${style.kgitem} list-group-item ${bought && "active"}`}>
         <span>{fooditems}</span>
         <button
           className={`${style.button} btn btn-primary `}
